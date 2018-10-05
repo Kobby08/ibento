@@ -5,14 +5,23 @@ class EventsController < ApplicationController
 	end
 
 	def create
-		@event = Event.new(:params)
-		if event.save
+		@event = Event.new(event_params)
+		
+		if @event.save
 			flash[:notice] = "Event was created succesfully"
 			redirect_to @event
 		else
 			flash.now[:alert] = "Event was not created!"
 			render "new"
 		end
+	end
+
+	def show
+		@event = Event.find(params[:id])
+	end
+
+	def index
+		@events = Event.all
 		
 	end
 
@@ -21,7 +30,7 @@ class EventsController < ApplicationController
 
 
 	private
-		def params
+		def event_params
 			params.require(:event).permit(:title, :description, :start_date, :end_date, :venue, :location)
 		end
 end
