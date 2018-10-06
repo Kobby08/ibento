@@ -1,4 +1,16 @@
 class EventsController < ApplicationController
+	
+	
+
+	def index
+		@events = Event.all
+	end
+
+	def show
+		@event = Event.find(params[:id])
+	end
+
+	
 	def new
 		
 		@event = Event.new
@@ -16,14 +28,7 @@ class EventsController < ApplicationController
 		end
 	end
 
-	def show
-		@event = Event.find(params[:id])
-	end
-
-	def index
-		@events = Event.all
-	end
-
+	
 	def edit
 		@event = Event.find(params[:id])
 	end
@@ -38,9 +43,9 @@ class EventsController < ApplicationController
 			flash.now[:alert] = "Event was not updated!"
 			render "edit"
 		end
-
 	end
 
+	
 	def destroy
 		@event = Event.find(params[:id])
 		@event.destroy
