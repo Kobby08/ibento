@@ -36,6 +36,11 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'better_errors', '~> 2.5'
 gem 'awesome_print', '~> 1.8'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'simple_form', '~> 4.0', '>= 4.0.1'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+gem 'pundit', '~> 2.0'
+gem 'devise', '~> 4.5'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
