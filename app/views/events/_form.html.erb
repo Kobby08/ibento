@@ -1,29 +1,14 @@
-<% if event.errors.any? %>
-	<div id="error_explanation">
-		<h2><%= pluralize(event.errors.count, "error") %> prohibited the event from being saved!</h2>
-	</div>
-
-	<ul>
-		<% event.errors.full_messages.each do |message|%>
-			<li><%= message %></li>
-		<% end %>
-	</ul>
-
-<% end %>
-
 
 <%= simple_form_for(event) do |f| %>
 	
 		<%= f.input :title %>
 
 		<%= f.input :description %>
-	
-		<%= f.input :start_date, as: :datetime, start_year: Date.today.year, ampm: true, order: [:day, :month, :year], class: "date-input" %>
-
-		<%= f.input :end_date, as: :datetime, start_year: Date.today.year, ampm: true, order: [:day, :month, :year], class: "date-input" %>
-	
 		
+		<%= f.input :start_date, as: :datetime, start_year: Date.today.year, ampm: true, order: [:day, :month, :year] %>
 
+		<%= f.input :end_date, as: :datetime, start_year: Date.today.year, ampm: true, order: [:day, :month, :year] %>
+		
 		<%= f.input :venue %>
 
 		<%= f.input :location %>
