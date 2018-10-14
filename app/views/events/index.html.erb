@@ -6,38 +6,38 @@
 </header>
 
 <div class="row">
-	<div class="col-sm-3 pull-right">
-		<div class="sidebar">
-			<h3 class="discover">Discover</h3>
-			<ul class="nav nav-pills nav-stacked">
-				<li class="<%= "active" if current_page?("/events")%>"><%= link_to "ALL EVENTS", events_path %></li>
-			</ul>
+		<div class="col-sm-3 pull-right">
+			<div class="sidebar">
+				<h3 class="discover">Discover</h3>
+				<ul class="nav nav-pills nav-stacked">
+					<li class="<%= "active" if current_page?("/events")%>"><%= link_to "ALL EVENTS", events_path %></li>
+				</ul>
+			</div>
 		</div>
+
+
+	<div class="col-sm-9">
+		<h3>Discover and get interative on your favourite events on Ibento</h3>
 	</div>
-</div>
-
-
-<div class="col-sm-9">
-	<h3>Discover and get interative on your favourite events on Ibento</h3>
-</div>
-<% @events.each do |event|%>
-	<div class="col-sm-9 pull-left">
-		<%= link_to event_path(event) do %>
-			<div class="event">
-				<div class="row">
-					<div class="col-sm-3">
-						<%= image_tag "http://placehold.it/200x100" %>
-					</div>
-					<div class="col-sm-9">
-						<h3 class="event-title"><%= event.title %></h3>
-						<p class="lead-time">
-							<span class="event-start"><%= time_format(event.start_date) %></span ><span class="pull-right">Organised by:</span>
-						</p>
+	<% @events.each do |event|%>
+		<div class="col-sm-9 pull-left">
+			<%= link_to event_path(event) do %>
+				<div class="event">
+					<div class="row">
+						<div class="col-sm-3">
+							<%= image_tag "1.jpg", class: "event-image" %>
+						</div>
+						<div class="col-sm-9">
+							<h3 class="event-title"><%= event.title %></h3>
+							<p class="lead-time">
+								<span class="event-start"><%= time_format(event.start_date) %></span ><span class="pull-right">Organised by:</span>
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
-		<% end %>
-		<hr>
-	</div>
-<% end %>
+			<% end %>
+			<hr>
+		</div>
+	<% end %>
+</div>
 
