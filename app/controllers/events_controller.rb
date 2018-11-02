@@ -4,7 +4,7 @@ class EventsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
 	#before_action :authorize_owner!, only: [:edit, :update, :destroy]
 	def index
-		@events = Event.order(created_at: :desc)
+		@events = Event.order(start_date: :desc)
 
 		authorize @events, :index?
 	end
