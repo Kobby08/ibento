@@ -1,0 +1,80 @@
+<div class="row">
+	<div class="col-sm-3 admin">
+		<div class="admin-sidebar">
+			<div class="user-panel">
+				<div class="pull-left image">
+					<span>image</span>
+				</div>
+				<div class="pull-left info">
+					<p><%= current_user.full_name%></p>	
+				</div>
+			</div>
+		</div>
+		<ul class="admin-menu">
+			<li class="text-uppercase header text-center">Main Navigation</li>
+			<li>
+				<%= link_to "#" do%>
+					<%= fa_icon "users" %>
+					<span>Users</span>
+					<span class="label label-primary pull-right">users</span>
+				<% end %>
+			</li>
+			
+			<li>
+				<%= link_to "#" do%>
+					<%= fa_icon "th" %>
+					<span>Categories</span>
+					<span class="label label-primary pull-right">categories</span>
+				<% end %>
+			</li>
+			
+			<li>
+				<%= link_to "#" do%>
+					<%= fa_icon "user" %>
+					<span>Attendees</span>
+					<span class="label label-primary pull-right">attendees</span>
+				<% end %>
+			</li>
+
+			<li>
+				<%= link_to events_path do%>
+					<%= fa_icon "calender" %>
+					<span>Events</span>
+					<span class="label label-primary pull-right"><%= @events.count%></span>
+				<% end %>
+			</li>
+
+			<li>
+				<%= link_to "#" do%>
+					<%= fa_icon "tag" %>
+					<span>Tags</span>
+					<span class="label label-primary pull-right">tags</span>
+				<% end %>
+			</li>
+
+			<li>
+				<%= link_to "#" do%>
+					<%= fa_icon "comments" %>
+					<span>Comments</span>
+					<span class="label label-primary pull-right">comments</span>
+				<% end %>
+			</li>
+
+			<li>
+				<%= link_to "#" do%>
+					<%= fa_icon "thumbs-o-up" %>
+					<span>Likes</span>
+					<span class="label label-primary pull-right">likes</span>
+				<% end %>
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-sm-8 ">
+		<header>
+			<h1>DASHBOARD<small>Control Panel</small></h1>
+		</header>
+
+		<p>Welcome to Admin Dashboard of Ibento</p>
+	</div>
+</div>
