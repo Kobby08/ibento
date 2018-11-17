@@ -41,6 +41,13 @@ gem 'simple_form', '~> 4.0', '>= 4.0.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'pundit', '~> 2.0'
 gem 'devise', '~> 4.5'
+gem 'carrierwave', '~> 1.2', '>= 1.2.3'
+gem 'friendly_id', '~> 5.2', '>= 5.2.4'
+gem 'fog', '~> 2.1'
+gem 'mini_magick', '~> 4.9', '>= 4.9.2'
+gem 'searchkick', '~> 3.1', '>= 3.1.2'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
