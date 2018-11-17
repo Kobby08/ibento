@@ -5,7 +5,7 @@ class EventsController < ApplicationController
 	#before_action :authorize_owner!, only: [:edit, :update, :destroy]
 	def index
 		@events = Event.order(start_date: :desc)
-
+		@categories = Category.order(:name)
 		authorize @events, :index?
 	end
 
