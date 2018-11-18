@@ -5,13 +5,14 @@
 	<ul class="actions">
 		<li><%= link_to "Edit Event", edit_event_path, class: "edit" if policy(@event).edit? %></li>
 		<li><%= link_to "Delete Event", event_path, method: :delete, data: {confirm: "Are you sure?"}, class: "delete" if policy(@event).destroy? %></li>
+		<li><%= link_to "Back", events_path, class: "btn btn-default" %></li>
 	</ul>
 </header>
 
 
 <div class="row">
 	<div class="col-sm-9">
-		<%= image_tag @event.image.path, class: "event-image" %>
+		<%= image_tag @event.image.url, class: "event-image" if @event.image.present? %>
 
 		<div class="event-meta">
 			<h4><span class="event-start"><strong>Starts:</strong><%= time_format(@event.start_date) %></span></h4>
