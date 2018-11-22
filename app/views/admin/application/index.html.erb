@@ -29,15 +29,15 @@
 			</li>
 			
 			<li>
-				<%= link_to "#" do%>
+				<%= link_to admin_attendances_path do%>
 					<%= fa_icon "user" %>
 					<span>Attendees</span>
-					<span class="label label-primary pull-right">attendees</span>
+					<span class="label label-primary pull-right"><%= @attendances.count %></span>
 				<% end %>
 			</li>
 
 			<li>
-				<%= link_to events_path do%>
+				<%= link_to admin_events_path do%>
 					<%= fa_icon "calender" %>
 					<span>Events</span>
 					<span class="label label-primary pull-right"><%= @events.count %></span>
@@ -53,10 +53,10 @@
 			</li>
 
 			<li>
-				<%= link_to "#" do%>
+				<%= link_to admin_comments_path do%>
 					<%= fa_icon "comments" %>
 					<span>Comments</span>
-					<span class="label label-primary pull-right">comments</span>
+					<span class="label label-primary pull-right"><%= @comments.count%></span>
 				<% end %>
 			</li>
 

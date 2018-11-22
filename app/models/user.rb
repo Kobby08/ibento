@@ -2,7 +2,7 @@ class User < ApplicationRecord
   extend FriendlyId
   friendly_id :username, use: :slugged
 
-  
+ 
 	has_many :organized_events, class_name: "Event", dependent: :destroy
   has_many :attendances
   has_many :attended_events, through: :attendances
