@@ -10,7 +10,7 @@ class LikesController < ApplicationController
 		if @like.valid?
 			flash[:notice] = "You #{params[:like]}d this event"
 		else
-			flash[:notice] = "You've already #{params[:like]}d this event"
+			flash[:alert] = "You've already #{params[:like]}d this event"
 		end
 		redirect_to event_path(@event)
 	end
