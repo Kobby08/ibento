@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
 	root 'events#index'
   resources :categories, only: [:show]
+  resources :tags, only: [:show]
 	resources :users, only: [:show]
 
 	
