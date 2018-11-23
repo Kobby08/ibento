@@ -18,6 +18,7 @@ class EventsController < ApplicationController
 		authorize @event, :show?
 		@comment = Comment.new
 		@comment.event_id = @event.id
+		
 	end
 
 	

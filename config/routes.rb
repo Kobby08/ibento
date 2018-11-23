@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
 	
   resources :events do
+    resources :likes, only: [:create]
     resources :comments, only: [:create]
     resources :attendances, only: [:create]
   end

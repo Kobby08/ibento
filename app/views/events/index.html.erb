@@ -56,6 +56,11 @@
 							<p class="lead-time">
 								<span class="event-start"><%= time_format(event.start_date) %></span > <span class="pull-right">Organised by: <%= event.organizer unless event.organizer.blank? %></span>
 							</p>
+							<p class="index-icons">
+								<span><%= fa_icon "comment"%> <%= event.comments.count%></span>
+								<span><%= fa_icon "thumbs-o-up"%> <%= event.total_likes%></span>
+								<span><%= fa_icon "thumbs-o-down"%> <%= event.total_dislikes%></span>
+							</p>
 						</div>
 					</div>
 				</div>

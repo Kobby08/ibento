@@ -52,11 +52,18 @@
 		</div>
 		<hr>
 		<div class="sidebar">
-			<h4 class="attendees">Attendees</h4>
+			<h4 class="attendees">Attendees</h4> 
 		</div>
 		<hr>
 		<div class="sidebar">
 			<h4 class="likes">Likes</h4>
+			<%= link_to event_likes_path(@event, like: "like"), method: :post do %>
+				<span id="like"><%= @event.total_likes %></span>
+			<% end %> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<%= link_to event_likes_path(@event, like: "dislike"), method: :post do %>
+				<span id="dislike"><%= @event.total_dislikes %></span>
+			<% end %>
 		</div>
 	</div>
 </div>
