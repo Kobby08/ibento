@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 	private
 		def configure_permitted_parameters
 			devise_parameter_sanitizer.permit(:sign_up) do |user|
-				user.permit(:first_name, :last_name, :username, :organisation_name, :email, :password, :password_confirmation)
+				user.permit( :username, :organisation_name, :email, :password, :password_confirmation)
 			end
 			devise_parameter_sanitizer.permit(:account_update) do |user|
 				user.permit(:first_name, :last_name, :username, :organisation_name, :email, :password, :current_password, :password_confirmation)
@@ -22,6 +22,10 @@ class ApplicationController < ActionController::Base
 		def user_not_authorized
 			flash[:alert] = "You are not authorized to perform that action"
 			redirect_to (request.referrer || root_path)
+		end
+
+		def after_sign_in_path_for(resource)
+			"/events"
 		end
 
 end

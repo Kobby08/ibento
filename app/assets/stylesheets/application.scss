@@ -3,25 +3,37 @@
 @import "font-awesome";
 @import "events";
 @import "admin/application";
-// @import "home";
+ @import "home";
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  color: #333;
-  // background: #f2f2f2;
-  padding-top: 70px;
+   
+  padding-top: 40px;
+   background: #fff;
+  color: #2f3138;
+ 
 }
 
 
+
+a {
+  color:  #0e1b4d;
+  transition: 0.5s;
+}
+
 a:hover {
-  text-decoration: none;
+  color: #f8234a;
+  outline: none;
+  text-decoration: none
+
 }
 
 header {
   @extend .page-header;
   position: relative;
   padding-bottom: 0;
+  padding-top:  50px;
 
   &:first-child {
     margin-top: 20px;
@@ -29,6 +41,11 @@ header {
 
   h1, h2, h3, h4, h5, h6 {
     max-width: 55%;
+    font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+  color: #0e1b4d;
   }
 }
 
@@ -44,13 +61,38 @@ ul.actions {
 
 a.new,
 a.edit,
-a.delete {
-  @extend .btn;
+a.delete,
+a.ibtn  {
+  background:#0e1b4d;
+  border-color: #0e1b4d;
+  border-radius: 20px; 
+  color: #fff;
+}
+a.new:hover,
+a.edit:hover,
+a.delete:hover,
+a.ibtn:hover {
+  background:#f8234a;
+  border-color: #f8234a;
+} 
 
+a.new,
+a.edit,
+a.delete,
+a.ibtn,
+ {
+  @extend .btn;
+ 
   &:before {
     font-family: "FontAwesome";
     padding-right: 0.5em;
+    
   }
+
+}
+
+a.ibtn {
+  @extend .btn-primary;
 }
 
 a.new {
@@ -77,12 +119,23 @@ a.delete {
   }
 }
 
-.alert-notice {
+.alert-notice{
   @extend .alert-success;
+    margin: 30px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    right: 20px;
 }
 
-.alert-alert {
+.alert-alert{
   @extend .alert-danger;
+     margin: 30px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    right: 20px;
+
 }
 
 
@@ -120,17 +173,39 @@ span.past {
 }
 
 
+.devise-page{
+   width: 100%;
+  height: 100vh;
+  background: asset_url("7.jpg") top center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  padding-top: 0;
+}
+
+.devise-page:before {
+  content: "";
+  background: rgba(6, 12, 34, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
 
 
+.thumbnail{
+  padding: 20px;
+  margin: 15px;
+}
 
-
-
-
-
-
-
-
-
+.navbar-inverse{
+  background: #0e1b4d;
+}
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:hover{
+  background: rgba(6, 12, 34, 0.8);
+}
 
 
 

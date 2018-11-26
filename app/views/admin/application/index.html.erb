@@ -1,80 +1,167 @@
+
 <div class="row">
-	<div class="col-sm-3 admin">
-		<div class="admin-sidebar">
-			<div class="user-panel">
-				<div class="pull-left image">
-					<span>image</span>
-				</div>
-				<div class="pull-left info">
-					<p><%= current_user.full_name%></p>	
-				</div>
-			</div>
-		</div>
-		<ul class="admin-menu">
-			<li class="text-uppercase header text-center">Main Navigation</li>
-			<li>
-				<%= link_to admin_users_path do%>
-					<%= fa_icon "users" %>
-					<span>Users</span>
-					<span class="label label-primary pull-right"><%= @users.count %></span>
-				<% end %>
-			</li>
-			
-			<li>
-				<%= link_to admin_categories_path do%>
-					<%= fa_icon "th" %>
-					<span>Categories</span>
-					<span class="label label-primary pull-right"><%= @categories.count %></span>
-				<% end %>
-			</li>
-			
-			<li>
-				<%= link_to admin_attendances_path do%>
-					<%= fa_icon "user" %>
-					<span>Attendees</span>
-					<span class="label label-primary pull-right"><%= @attendances.count %></span>
-				<% end %>
-			</li>
-
-			<li>
-				<%= link_to admin_events_path do%>
-					<%= fa_icon "calender" %>
-					<span>Events</span>
-					<span class="label label-primary pull-right"><%= @events.count %></span>
-				<% end %>
-			</li>
-
-			<li>
-				<%= link_to "#" do%>
-					<%= fa_icon "tag" %>
-					<span>Tags</span>
-					<span class="label label-primary pull-right">tags</span>
-				<% end %>
-			</li>
-
-			<li>
-				<%= link_to admin_comments_path do%>
-					<%= fa_icon "comments" %>
-					<span>Comments</span>
-					<span class="label label-primary pull-right"><%= @comments.count%></span>
-				<% end %>
-			</li>
-
-			<li>
-				<%= link_to "#" do%>
-					<%= fa_icon "thumbs-o-up" %>
-					<span>Likes</span>
-					<span class="label label-primary pull-right"><%= @likes.count%></span>
-				<% end %>
-			</li>
-		</ul>
-	</div>
+	
 
 	<div class="col-sm-8 ">
 		<header>
-			<h1>DASHBOARD<small>Control Panel</small></h1>
+			<h1>DASHBOARD</h1>
 		</header>
 
-		<p>Welcome to Admin Dashboard of Ibento</p>
+		<h2>Welcome to Admin Dashboard of Ibento</h2>
+		</br>
+		</br>
 	</div>
+        <!--Admin Panels-->
+			<div class="col-sm-12 ">
+                <div class="col-lg-3 col-md-6">
+                	<%= link_to admin_users_path do%>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-users fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"><%= @users.count %></div>
+                                    <div>Users</div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <% end %>
+                </div>
+
+                 <div class="col-lg-3 col-md-6">
+                	<%= link_to admin_categories_path do%>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-th fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"><%= @categories.count %></div>
+                                    <div>Categories</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <% end %>
+                </div>
+
+                 <div class="col-lg-3 col-md-6">
+                	<%= link_to admin_attendances_path do%>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-user fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"><%= @attendances.count %></div>
+                                    <div>Attendees</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <% end %>
+                </div>
+
+                 <div class="col-lg-3 col-md-6">
+                	<%= link_to admin_events_path do%>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-users fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"><%= @events.count %></div>
+                                    <div>Events</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <% end %>
+                </div>
+
+                <%= link_to admin_comments_path do%>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-comments fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"><%= @comments.count %></div>
+                                    <div>Comments</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <% end %>
+                
+
+                <%= link_to "#" do %>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-thumbs-o-up fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"><%= @likes.count %></div>
+                                    <div>Likes</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <% end %>
+
+</div>
 </div>

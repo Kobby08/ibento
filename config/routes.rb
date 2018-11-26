@@ -9,10 +9,10 @@ Rails.application.routes.draw do
     resources :events, only: [:index]
   end
   
-  devise_for :users
+  devise_for :users, controller:{ registrations: 'registrations'}
 	
 
-	root 'events#index'
+	root 'home#index'
   resources :categories, only: [:show]
   resources :tags, only: [:show]
 	resources :users, only: [:show]

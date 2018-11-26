@@ -37,6 +37,7 @@
   &:before {
     font-family: "FontAwesome";
     padding-right: 0.5em;
+    color : #0e1b4d;
   }
 }
 
@@ -109,7 +110,7 @@
 a #like,
 a #dislike,
 .sidebar h4 {
-  color: #1d4464;
+  color: #0e1b4d;
 }
 
 .sidebar h4.tags {
@@ -119,7 +120,7 @@ a #dislike,
 .sidebar .tag {
   font-weight: bold;
   padding: 5px;
-  background: #1d4464;
+  background: #0e1b4d;
   border-radius: 2px;
   display: inline-block;
   margin-right: 10px;
@@ -139,13 +140,12 @@ a #dislike,
   }
 }
 
-// .comments {
-//   margin: 0;
+ .comments {
+  margin: 0;
 
-//   &:before {
-//     @extend .fa-comments-o;
-//   }
-// }
+   &:before {
+     @extend .fa-comments-o;   }
+ }
 
 .index-icons {
   @extend .pull-right;
@@ -159,7 +159,7 @@ a #dislike,
   font-weight: bold;
   font-size: 1.5em;
   line-height: 20px;
-  // color: #1d4464;
+   color: #1d4464;
 }
 
 .sidebar a {
@@ -182,7 +182,7 @@ h1#show-title,
 .event-meta {
   // margin: 0 -20px 20px;
   padding: 20px;
-  background: #f23677;
+  background: #0e1b4d;
   color: #fff;
 }
 
@@ -212,7 +212,7 @@ h1#show-title,
 .nav-pills > li.active > a, 
 .nav-pills > li.active > a:hover, 
 .nav-pills > li.active > a:focus {
-   background: #e0336b;
+   background: #0e1b4d;
    font-weight: bold;
 }
 
