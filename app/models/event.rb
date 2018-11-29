@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
 	attr_accessor :tag_list
-	#searchkick
+	searchkick
 	extend FriendlyId
 	friendly_id :title, use: :slugged
 	
